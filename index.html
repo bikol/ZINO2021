@@ -1,5 +1,83 @@
 <html>
 <body>
-Pusta strona
+<style>
+    code {
+        background-color: lightgray;
+    }
+</style>
+    <ul>
+        <li>
+            <code>git config --global user.name "username"</code> - ustawienie nazwy użytkownika. Jeśli skorzystasz z opcji --global wystarczy, że taka konfiguracja zostanie dokonana jednorazowo. Git skorzysta z niej podczas każdej operacji wykonywanej przez Ciebie w danym systemie. Jeśli zaistnieje potrzeba zmiany tych informacji dla konkretnego projektu, można skorzystać z git config bez opcji --global.
+        </li>
+        <li>
+            <code>git reset HEAD</code> - Resetowanie przygotowanych commitów (przed wysłaniem). Zmodyfikowane pliki są dostępne do ponownego dodania.
+        </li>
+        <li>
+            <code>gitk -all</code> - Wyświetla zmiany dokonane w repozytorium lub w wybranych commitach. Pokazuje wszystkie odniesienia ( branche, tagi,itp.)
+        </li>
+        <li>
+            <code>git branch --merged</code> - Pozwala na sprawdzenie/wyświetlenie które branche zostały wcześniej zmergowane do brancha w którym aktualnie jesteś.
+        </li>
+        <li>
+            <code>git branch "branch" "commit hash"</code> - 
+        </li>
+        <li>
+            <code>git pull "remote" "branch"</code> - 
+        </li>
+        <li>
+            <code>git config --global user.email ""</code> - Komenda ta służy do ustawienia adresu email użytkownika, jeżeli dodamy opcję --global wtedy Git skorzysta z niej za każdorazowym użyciem.
+        </li>
+        <li>
+            <code>git diff --staged</code> - sprawdzenie wprowadzonych zmian
+        </li>
+        <li>
+            <code>git checkout -b "branch"</code> - Komenda służy do utworzenia nowego brancha (o nazwie "branch"), a następnie przepięcia się na niego (checkout). Jest to połączenie komend git branch -f "branch" oraz git checkout "branch". 
+        </li>
+        <li>
+            <code>git log --graph --all</code> - 
+        </li>
+        <li>
+            <code>git branch -d "branch"</code> - Komenda pozwalająca na lokalne usunięcie branch. Opcja -d usunie branch tylko wtedy gdy jeśli ona została wysłana i zmergowana z zewnętrznym branch. Jeśli zachodzi potrzeba użycia silnego usunięcia branch, trzeba użyć opcji -D, pozwoli na usuniecie branch nawet jesli nie zostalo ono wyslane ani zmergowane. Po użyciu tej komendy branch zostanie usunięty z lokalnego repozytorium.
+        </li>
+        <li>
+            <code>git fetch "remote" "branch"</code> - 
+        </li>
+        <li>
+            <code>git config --global color.ui true</code> - Komenda jest przełącznikiem pozwalającym konfigurować koloryzowanie danych wyjścia. Dostępne są trzy opcje: <code>true</code>, <code>auto</code> oraz <code>false</code>.
+        </li>
+        <li>
+            <code>git commit "filename"</code> - 
+        </li>
+        <li>
+            <code>git branch -v</code> - Komenda pozwala nam pokazać wszystkie gałęzie istniejące w repozytorium, w którym znajdujemy się w daniej chwili. Opcja "-v" pozwala nam zobaczyć ostatni dokonany commit.
+        </li>
+        <li>
+            <code>git push "remote" "branch"</code> - 
+        </li>
+        <li>
+            <code>git log "branch" --not "branch"</code> - 
+        </li>
+        <li>
+            <code>git bisect (start, bad, good, reset)</code> - 
+        </li>
+        <li>
+            <code>git commit -a -m ""</code> - Komenda pozwala na wysłanie commita, gdzie parametr -a uwzględni wszystkie zmiany w plikach, również te nie dodane do poczekalni. Parametr -m odpowiada za dodanie komentarza zawartego w " ".
+        </li>
+        <li>
+            <code>git add .</code> - dodaje zmiany we wszystkich plikach w katalogu roboczym i podkatalogach. Pliki, które nie występowały w bieżącej wersji są dodawane. Jeśli chcemy dodać zmianę tylko w obecnym pliku, to zamiast '.' używamy nazwy pliku, np (git add plik_testowy.txt). Jeżeli wcześniej taki plik nie istniał, to ta komenda powoduje jego stworzenie.
+        </li>
+        <li>
+            <code>git checkout "branch"</code> - Komenda służy do utworzenia nowego brancha (o nazwie "branch"), a następnie przepięcia się na niego (checkout) Jest to połączenie komend git branch -f "branch" oraz git checkout "branch".
+        </li>
+        <li>
+            <code>git remote add "remote_name" "git url"</code> - 
+        </li>
+        <li>
+            <code>git blame -C "filename"</code> - Służy do pokazania która wersja i autor ostatnio zmodyfikowali każdą linię pliku o nazwie "filename". Jest to sprawdzenie histroii rozwoju pliku. Parametr -C wykrywa linie przeniesione lub skopiowane z innych plików które był zmodyfikowane w tym samym commicie.
+        </li>
+        <li>
+            <code>git branch "name"</code> - Dodanie odgałęzienia o nazwie "name".
+        </li>
+    </ul>
 </body>
 </html>
