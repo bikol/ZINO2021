@@ -1,5 +1,6 @@
 <html>
 <body>
+
 <style>
     code {
         background-color: lightgray;
@@ -13,10 +14,10 @@
             <code>git reset HEAD</code> - Resetowanie przygotowanych commitów (przed wysłaniem). Zmodyfikowane pliki są dostępne do ponownego dodania.
         </li>
         <li>
-            <code>gitk -all</code> - Wyświetla zmiany dokonane w repozytorium lub w wybranych commitach. Pokazuje wszystkie odniesienia ( branche, tagi,itp.)
+            <code>gitk -all</code> - 
         </li>
         <li>
-            <code>git branch --merged</code> - Pozwala na sprawdzenie/wyświetlenie które branche zostały wcześniej zmergowane do brancha w którym aktualnie jesteś.
+            <code>git branch --merged</code> - 
         </li>
         <li>
             <code>git branch "branch" "commit hash"</code> - 
@@ -31,10 +32,10 @@
             <code>git diff --staged</code> - sprawdzenie wprowadzonych zmian
         </li>
         <li>
-            <code>git checkout -b "branch"</code> - Komenda służy do utworzenia nowego brancha (o nazwie "branch"), a następnie przepięcia się na niego (checkout). Jest to połączenie komend git branch -f "branch" oraz git checkout "branch".
+            <code>git checkout -b "branch"</code> - 
         </li>
         <li>
-            <code>git log --graph --all</code> - 
+            <code>git log --graph --all</code> - Tworzy bardzo przydatny wykres w wierszu poleceń dzięki któremu można zwizualizować bieżący stan repozytorium i wszystkich gałęzi. Opcja --graph tworzy mały graf ASCII pokazujący historię gałęzi oraz scaleń. Opcja -all pokazuje wszystkie gałęzie, również te, które nie znajdują się w gałęzi głównej, np. gałęzie testowe. 
         </li>
         <li>
             <code>git branch -d "branch"</code> - 
@@ -46,7 +47,7 @@
             <code>git config --global color.ui true</code> - Komenda jest przełącznikiem pozwalającym konfigurować koloryzowanie danych wyjścia. Dostępne są trzy opcje: <code>true</code>, <code>auto</code> oraz <code>false</code>.
         </li>
         <li>
-            <code>git commit "filename"</code> - 
+            <code>git commit "filename"</code> - Komenda zatwierdza zmiany na jednym określonym w argumencie <code>filename</code></code> pliku.
         </li>
         <li>
             <code>git branch -v</code> - Komenda pozwala nam pokazać wszystkie gałęzie istniejące w repozytorium, w którym znajdujemy się w daniej chwili. Opcja "-v" pozwala nam zobaczyć ostatni dokonany commit.
@@ -76,7 +77,7 @@
             <code>git blame -C "filename"</code> - Służy do pokazania która wersja i autor ostatnio zmodyfikowali każdą linię pliku o nazwie "filename". Jest to sprawdzenie histroii rozwoju pliku. Parametr -C wykrywa linie przeniesione lub skopiowane z innych plików które był zmodyfikowane w tym samym commicie.
         </li>
         <li>
-            <code>git branch "name"</code> - Dodanie odgałęzienia o nazwie "name".
+            <code>git branch "name"</code> - 
         </li>
     </ul>
 </body>
