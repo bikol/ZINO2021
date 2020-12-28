@@ -29,7 +29,7 @@
             <code>git config --global user.email ""</code> - Komenda ta służy do ustawienia adresu email użytkownika, jeżeli dodamy opcję --global wtedy Git skorzysta z niej za każdorazowym użyciem.
         </li>
         <li>
-            <code>git diff --staged</code> - 
+            <code>git diff --staged</code> - sprawdzenie wprowadzonych zmian
         </li>
         <li>
             <code>git checkout -b "branch"</code> - 
@@ -44,13 +44,13 @@
             <code>git fetch "remote" "branch"</code> - 
         </li>
         <li>
-            <code>git config --global color.ui true</code> - 
+            <code>git config --global color.ui true</code> - Komenda jest przełącznikiem pozwalającym konfigurować koloryzowanie danych wyjścia. Dostępne są trzy opcje: <code>true</code>, <code>auto</code> oraz <code>false</code>.
         </li>
         <li>
             <code>git commit "filename"</code> - Komenda zatwierdza zmiany na jednym określonym w argumencie <code>filename</code></code> pliku.
         </li>
         <li>
-          <code>git branch -v</code> - Komenda pozwala nam pokazać wszystkie gałęzie istniejące w repozytorium, w którym znajdujemy się w daniej chwili. Opcja "-v" pozwala nam zobaczyć ostatni dokonany commit.
+            <code>git branch -v</code> - Komenda pozwala nam pokazać wszystkie gałęzie istniejące w repozytorium, w którym znajdujemy się w daniej chwili. Opcja "-v" pozwala nam zobaczyć ostatni dokonany commit.
         </li>
         <li>
             <code>git push "remote" "branch"</code> - 
@@ -62,19 +62,19 @@
             <code>git bisect (start, bad, good, reset)</code> - 
         </li>
         <li>
-            <code>git commit -a -m ""</code> - 
+            <code>git commit -a -m ""</code> - Komenda pozwala na wysłanie commita, gdzie parametr -a uwzględni wszystkie zmiany w plikach, również te nie dodane do poczekalni. Parametr -m odpowiada za dodanie komentarza zawartego w " ".
         </li>
         <li>
             <code>git add .</code> - dodaje zmiany we wszystkich plikach w katalogu roboczym i podkatalogach. Pliki, które nie występowały w bieżącej wersji są dodawane. Jeśli chcemy dodać zmianę tylko w obecnym pliku, to zamiast '.' używamy nazwy pliku, np (git add plik_testowy.txt). Jeżeli wcześniej taki plik nie istniał, to ta komenda powoduje jego stworzenie.
         </li>
         <li>
-            <code>git checkout "branch"</code> - 
+            <code>git checkout "branch"</code> - Komenda służy do utworzenia nowego brancha (o nazwie "branch"), a następnie przepięcia się na niego (checkout) Jest to połączenie komend git branch -f "branch" oraz git checkout "branch".
         </li>
         <li>
             <code>git remote add "remote_name" "git url"</code> - 
         </li>
         <li>
-            <code>git blame -C "filename"</code> - 
+            <code>git blame -C "filename"</code> - Służy do pokazania która wersja i autor ostatnio zmodyfikowali każdą linię pliku o nazwie "filename". Jest to sprawdzenie histroii rozwoju pliku. Parametr -C wykrywa linie przeniesione lub skopiowane z innych plików które był zmodyfikowane w tym samym commicie.
         </li>
         <li>
             <code>git branch "name"</code> - 
