@@ -1,5 +1,6 @@
 <html>
 <body>
+
 <style>
     code {
         background-color: lightgray;
@@ -10,7 +11,7 @@
             <code>git config --global user.name "username"</code> - ustawienie nazwy użytkownika. Jeśli skorzystasz z opcji --global wystarczy, że taka konfiguracja zostanie dokonana jednorazowo. Git skorzysta z niej podczas każdej operacji wykonywanej przez Ciebie w danym systemie. Jeśli zaistnieje potrzeba zmiany tych informacji dla konkretnego projektu, można skorzystać z git config bez opcji --global.
         </li>
         <li>
-            <code>git reset HEAD</code> - 
+            <code>git reset HEAD</code> - Resetowanie przygotowanych commitów (przed wysłaniem). Zmodyfikowane pliki są dostępne do ponownego dodania.
         </li>
         <li>
             <code>gitk -all</code> - 
@@ -25,7 +26,7 @@
             <code>git pull "remote" "branch"</code> - 
         </li>
         <li>
-            <code>git config --global user.email ""</code> - 
+            <code>git config --global user.email ""</code> - Komenda ta służy do ustawienia adresu email użytkownika, jeżeli dodamy opcję --global wtedy Git skorzysta z niej za każdorazowym użyciem.
         </li>
         <li>
             <code>git diff --staged</code> - 
@@ -34,7 +35,7 @@
             <code>git checkout -b "branch"</code> - 
         </li>
         <li>
-            <code>git log --graph --all</code> - 
+            <code>git log --graph --all</code> - Tworzy bardzo przydatny wykres w wierszu poleceń dzięki któremu można zwizualizować bieżący stan repozytorium i wszystkich gałęzi. Opcja --graph tworzy mały graf ASCII pokazujący historię gałęzi oraz scaleń. Opcja -all pokazuje wszystkie gałęzie, również te, które nie znajdują się w gałęzi głównej, np. gałęzie testowe. 
         </li>
         <li>
             <code>git branch -d "branch"</code> - Komenda pozwalająca na lokalne usunięcie branch. Opcja -d usunie branch tylko wtedy gdy jeśli ona została wysłana i zmergowana z zewnętrznym branch. Jeśli zachodzi potrzeba użycia silnego usunięcia branch, trzeba użyć opcji -D, pozwoli na usuniecie branch nawet jesli nie zostalo ono wyslane ani zmergowane. Po użyciu tej komendy branch zostanie usunięty z lokalnego repozytorium.
@@ -46,10 +47,10 @@
             <code>git config --global color.ui true</code> - 
         </li>
         <li>
-            <code>git commit "filename"</code> - 
+            <code>git commit "filename"</code> - Komenda zatwierdza zmiany na jednym określonym w argumencie <code>filename</code></code> pliku.
         </li>
         <li>
-            <code>git branch -v</code> - 
+          <code>git branch -v</code> - Komenda pozwala nam pokazać wszystkie gałęzie istniejące w repozytorium, w którym znajdujemy się w daniej chwili. Opcja "-v" pozwala nam zobaczyć ostatni dokonany commit.
         </li>
         <li>
             <code>git push "remote" "branch"</code> - 
@@ -64,7 +65,7 @@
             <code>git commit -a -m ""</code> - 
         </li>
         <li>
-            <code>git add .</code> - 
+            <code>git add .</code> - dodaje zmiany we wszystkich plikach w katalogu roboczym i podkatalogach. Pliki, które nie występowały w bieżącej wersji są dodawane. Jeśli chcemy dodać zmianę tylko w obecnym pliku, to zamiast '.' używamy nazwy pliku, np (git add plik_testowy.txt). Jeżeli wcześniej taki plik nie istniał, to ta komenda powoduje jego stworzenie.
         </li>
         <li>
             <code>git checkout "branch"</code> - 
