@@ -84,7 +84,12 @@
             <code>git log "branch" --not "branch"</code> -
         </li>
         <li>
-            <code>git bisect (start, bad, good, reset)</code> -
+            <code>git bisect (start, bad, good, reset)</code> - komenda pozwalająca na przeglądanie zmian commit po commicie celem znalezienia zmiany, która psuje nasz kod. <br><br>
+            <b>Przykład użycia:</b><br>
+            Przechodzimy do dowolnego commita, gdzie błąd nie występuje i wykonujemy na nim komendy <code>git bisect start</code> oraz <code>git bisect good</code> - w ten sposób wybieramy punkt od którego rozpoczyna się przeglądanie commitów, a commit na którym jesteśmy oznaczamy jako działający.<br>
+            Git w tym momencie dzieli ilość commitów na pół i przechodzi do "środkowego". Sprawdzamy czy błąd występuje, jeśli nie ponownie używamy komendy <code>git bisect good</code>, a git sprawdza drugą połowę commitów, w przeciwnym wypadku używamy komendy <code>git bisect bad</code>, wtedy Git będzie sprawdzał pierwszą połowę commitów.<br>
+            Proces ten powtarza się aż do momentu, w którym znajdziemy commit psujący nasz kod.
+            Gdy znajdziemy wadliwy commit używamy komendy <code>git bisect reset</code> aby zakończyć proces przeglądania commitów.<br><br>
         </li>
         <li>
             <code>git commit -a -m ""</code> -
