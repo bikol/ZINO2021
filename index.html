@@ -13,13 +13,13 @@
             <code>git reset HEAD</code> - Komenda reset przenosi aktualną gałąź (branch) do wskazanej pozycji oraz opcjonalnie aktualizuje przechowalnię (stage) oraz katalog roboczy (working directory). Jest również używana do kopiowania plików z katalogu git (history) do przechowalni (stage) bez naruszania katalogu roboczego (working directory). Jeśli commit nie zostanie podany, domyślnie gałąź (branch) wskazuje na HEAD. W takim przypadku nie nastąpi zmiana gałęzi (branch) - przechowalnia (stage) zostanie zresetowana do zawartości ostatniego commita (jeśli zostanie użyty przełącznik --hard resetowi ulegnie również katalog roboczy (working directory)).Oczywiście zamiast używania HEAD można również sprecyzować commit, z którego zostaną skopiowane pliki.
         </li>
         <li>
-            <code>gitk -all</code> -
+            <code>gitk -all</code> - Komenda gitk wywołuje graficzny interfejs służący przeglądaniu repozytoriów. Dodanie opcji -all pozwala na analizę wszystkich składowych repozytorium tj. gałęzie, tagi, referencje.  
         </li>
         <li>
            <code>git branch --merged</code> - Filtruje i pokazuje te gałęzie, które są scalone z aktywną gałęzią
         </li>
         <li>
-            <code>git branch "branch" "commit hash"</code> -
+            <code>git branch "branch" "commit hash"</code> - Komenda ta służy stworzeniu nowej gałęzi z poprzedniego, wybranego na podstawie hasha SH1 commita. Do wywołania komendy można także użyć skrótowej wersji hasha, zawierającej kilka pierwszych znaków hasha, conajmniej 4. Po stworzeniu nowej gałęzi należy ją przesłać komendą "push".
         </li>
         <li>
             <code>git pull "remote" "branch"</code> -
@@ -37,7 +37,7 @@
             <code>git diff --staged</code> - sprawdzenie wprowadzonych zmian
         </li>
         <li>
-            <code>git checkout -b "branch"</code> -
+            <code>git checkout -b "branch"</code> - Komendę tę wykorzystujemy do utworzenia nowej gałęzi oraz przełączeniu się do niej
         </li>
         <li>
             <code>git log --graph --all</code> -
