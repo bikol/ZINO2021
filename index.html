@@ -13,13 +13,13 @@
             <code>git reset HEAD</code> - Komenda reset przenosi aktualną gałąź (branch) do wskazanej pozycji oraz opcjonalnie aktualizuje przechowalnię (stage) oraz katalog roboczy (working directory). Jest również używana do kopiowania plików z katalogu git (history) do przechowalni (stage) bez naruszania katalogu roboczego (working directory). Jeśli commit nie zostanie podany, domyślnie gałąź (branch) wskazuje na HEAD. W takim przypadku nie nastąpi zmiana gałęzi (branch) - przechowalnia (stage) zostanie zresetowana do zawartości ostatniego commita (jeśli zostanie użyty przełącznik --hard resetowi ulegnie również katalog roboczy (working directory)).Oczywiście zamiast używania HEAD można również sprecyzować commit, z którego zostaną skopiowane pliki.
         </li>
         <li>
-            <code>gitk -all</code> -
+            <code>gitk -all</code> - wyświetla GUI dla Git
         </li>
         <li>
            <code>git branch --merged</code> - Filtruje i pokazuje te gałęzie, które są scalone z aktywną gałęzią
         </li>
         <li>
-            <code>git branch "branch" "commit hash"</code> -
+            <code>git branch "branch" "commit hash"</code> - tworzy nową gałąź z istniejącego commita o nazwie "branch" na podstawie podanego hasha
         </li>
         <li>
           <code>git pull "remote" "branch"</code> - Komenda ta pobiera najnowszą wersję kodu ze zdalnego repozytorium oraz scala ją z wybraną gałęzią lokalnego repozytorium. Przykład użycia: <strong>git pull origin master</strong></stronhg>
@@ -111,7 +111,7 @@ Przykład użycia: tworzenie rozbudowanego i intuicyjnego programu z użyciem gi
             <code>git checkout "branch"</code> - Komenda służy do utworzenia nowego brancha (o nazwie "branch"), a następnie przepięcia się na niego (checkout) Jest to połączenie komend git branch -f "branch" oraz git checkout "branch".
         </li>
         <li>
-            <code>git remote add "remote_name" "git url"</code> -
+            <code>git remote add "remote_name" "git url"</code> - dodaje zdalne repozytorium ze skrótem, "remote_name" zamiast pełnego "git url"
         </li>
         <li>
             <code>git blame -C "filename"</code> -
