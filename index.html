@@ -19,10 +19,10 @@
            <code>git branch --merged</code> - Filtruje i pokazuje te gałęzie, które są scalone z aktywną gałęzią
         </li>
         <li>
-            <code>git branch "branch" "commit hash"</code> - Komenda ta służy stworzeniu nowej gałęzi z poprzedniego, wybranego na podstawie hasha SH1 commita. Do wywołania komendy można także użyć skrótowej wersji hasha, zawierającej kilka pierwszych znaków hasha, conajmniej 4. Po stworzeniu nowej gałęzi należy ją przesłać komendą "push".
+            <code>git branch "branch" "commit hash"</code> - tworzy nową gałąź z istniejącego commita o nazwie "branch" na podstawie podanego hasha
         </li>
         <li>
-            <code>git pull "remote" "branch"</code> -
+          <code>git pull "remote" "branch"</code> - Komenda ta pobiera najnowszą wersję kodu ze zdalnego repozytorium oraz scala ją z wybraną gałęzią lokalnego repozytorium. Przykład użycia: <strong>git pull origin master</strong></stronhg>
         </li>
         <li>
             <code>git config --global user.email ""</code> - ustawnienie adresu e-mail użytkownika
@@ -34,7 +34,7 @@
             <code>git config --global user.email ""</code> - Komenda ta służy do ustawienia adresu email użytkownika, jeżeli dodamy opcję --global wtedy Git skorzysta z niej za każdorazowym użyciem.
         </li>
         <li>
-            <code>git diff --staged</code> - sprawdzenie wprowadzonych zmian
+            <code>git diff --staged</code> - sprawdzenie wprowadzonych zmian. (--staged jest synonimem --cached)
         </li>
         <li>
             <code>git checkout -b "branch"</code> - Komendę tę wykorzystujemy do utworzenia nowej gałęzi oraz przełączeniu się do niej
@@ -52,7 +52,7 @@
             <code>git branch -d "branch"</code> - Komenda pozwalająca na lokalne usunięcie branch. Opcja -d usunie branch tylko wtedy gdy jeśli ona została wysłana i zmergowana z zewnętrznym branch. Jeśli zachodzi potrzeba użycia silnego usunięcia branch, trzeba użyć opcji -D, pozwoli na usuniecie branch nawet jesli nie zostalo ono wyslane ani zmergowane. Po użyciu tej komendy branch zostanie usunięty z lokalnego repozytorium.
         </li>
         <li>
-            <code>git fetch "remote" "branch"</code> -
+            <code>git fetch "remote" "branch"</code> - git fetch to polecenie, które umożliwia pobieranie najnowszej wersji zdalnego repozytorium z określonej gałęzi bez scalania. Przykład użycia: <strong>git fetch origin master</strong>
         </li>
         <li>
             <code>git config --global color.ui true</code> -
@@ -64,7 +64,12 @@
             <code>git branch -v</code> -
         </li>
         <li>
-            <code>git config --global color.ui true</code> - Komenda jest przełącznikiem pozwalającym konfigurować koloryzowanie danych wyjścia. Dostępne są trzy opcje: <code>true</code>, <code>auto</code> oraz <code>false</code>.
+            <code>git config --global color.ui true</code> - Komenda jest przełącznikiem pozwalającym konfigurować koloryzowanie danych wyjścia. Dostępne są trzy opcje: 
+                <ul>
+                    <li><code>true</code> - włącza koloryzowanie danych wyjściowych</li>
+                    <li><code>auto</code> - włącza koloryzowanie danych wyjściowych ale tylko te trafiające do terminalu</li>
+                    <li><code>false</code> - wyłącza koloryzowanie danych wyjściowych</li>
+                </ul>
         </li>
         <li>
             <code>git commit "filename"</code> - Komenda zatwierdza zmiany na jednym określonym w argumencie <code>filename</code></code> pliku.
@@ -79,7 +84,12 @@
             <code>git log "branch" --not "branch"</code> -
         </li>
         <li>
-            <code>git bisect (start, bad, good, reset)</code> -
+            <code>git bisect (start, bad, good, reset)</code> - komenda pozwalająca na przeglądanie zmian commit po commicie celem znalezienia zmiany, która psuje nasz kod. <br><br>
+            <b>Przykład użycia:</b><br>
+            Przechodzimy do dowolnego commita, gdzie błąd nie występuje i wykonujemy na nim komendy <code>git bisect start</code> oraz <code>git bisect good</code> - w ten sposób wybieramy punkt od którego rozpoczyna się przeglądanie commitów, a commit na którym jesteśmy oznaczamy jako działający.<br>
+            Git w tym momencie dzieli ilość commitów na pół i przechodzi do "środkowego". Sprawdzamy czy błąd występuje, jeśli nie ponownie używamy komendy <code>git bisect good</code>, a git sprawdza drugą połowę commitów, w przeciwnym wypadku używamy komendy <code>git bisect bad</code>, wtedy Git będzie sprawdzał pierwszą połowę commitów.<br>
+            Proces ten powtarza się aż do momentu, w którym znajdziemy commit psujący nasz kod.
+            Gdy znajdziemy wadliwy commit używamy komendy <code>git bisect reset</code> aby zakończyć proces przeglądania commitów.<br><br>
         </li>
         <li>
             <code>git commit -a -m ""</code> -
@@ -101,7 +111,7 @@ Przykład użycia: tworzenie rozbudowanego i intuicyjnego programu z użyciem gi
             <code>git checkout "branch"</code> - Komenda służy do utworzenia nowego brancha (o nazwie "branch"), a następnie przepięcia się na niego (checkout) Jest to połączenie komend git branch -f "branch" oraz git checkout "branch".
         </li>
         <li>
-            <code>git remote add "remote_name" "git url"</code> -
+            <code>git remote add "remote_name" "git url"</code> - dodaje zdalne repozytorium ze skrótem, "remote_name" zamiast pełnego "git url"
         </li>
         <li>
             <code>git blame -C "filename"</code> -
