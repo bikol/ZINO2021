@@ -78,7 +78,9 @@
             <code>git branch -v</code> - Komenda pozwala nam pokazać wszystkie gałęzie istniejące w repozytorium, w którym znajdujemy się w daniej chwili. Opcja "-v" pozwala nam zobaczyć ostatni dokonany commit.
         </li>
         <li>
-            <code>git push "remote" "branch"</code> -
+            <code>git push "remote" "branch"</code> - Wypycha określoną gałąź do elementu wraz ze wszystkimi wymaganymi zatwierdzeniami i obiektami wewnętrznymi. Powoduje to utworzenie gałęzi lokalnej w repozytorium docelowym. Aby zapobiec nadpisaniu zatwierdzeń, Środowisko Git nie pozwoli na wypychanie, jeżeli przyczyni się do scalenia w repozytorium docelowym bez przyspieszenia.
+
+
         </li>
         <li>
             <code>git log "branch" --not "branch"</code> -
@@ -95,7 +97,7 @@
             <code>git commit -a -m ""</code> -
         </li>
         <li>
-            <code>git add .</code> -
+            <code>git add .</code> - 
         </li>
         <li>
             <code>git checkout "branch"</code> -
