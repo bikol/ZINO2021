@@ -13,7 +13,7 @@
             <code>git reset HEAD</code> - Komenda reset przenosi aktualną gałąź (branch) do wskazanej pozycji oraz opcjonalnie aktualizuje przechowalnię (stage) oraz katalog roboczy (working directory). Jest również używana do kopiowania plików z katalogu git (history) do przechowalni (stage) bez naruszania katalogu roboczego (working directory). Jeśli commit nie zostanie podany, domyślnie gałąź (branch) wskazuje na HEAD. W takim przypadku nie nastąpi zmiana gałęzi (branch) - przechowalnia (stage) zostanie zresetowana do zawartości ostatniego commita (jeśli zostanie użyty przełącznik --hard resetowi ulegnie również katalog roboczy (working directory)).Oczywiście zamiast używania HEAD można również sprecyzować commit, z którego zostaną skopiowane pliki.
         </li>
         <li>
-            <code>gitk -all</code> - Komenda gitk wywołuje graficzny interfejs służący przeglądaniu repozytoriów. Dodanie opcji -all pozwala na analizę wszystkich składowych repozytorium tj. gałęzie, tagi, referencje.  
+            <code>gitk -all</code> - Komenda gitk wywołuje graficzny interfejs służący przeglądaniu repozytoriów. Dodanie opcji -all pozwala na analizę wszystkich składowych repozytorium tj. gałęzie, tagi, referencje.
         </li>
         <li>
            <code>git branch --merged</code> - Filtruje i pokazuje te gałęzie, które są scalone z aktywną gałęzią
@@ -47,7 +47,6 @@
             <code>git branch -d "branch"</code> -
         </li>
         <li>
-
             <code>git log --graph --all</code> - Tworzy bardzo przydatny wykres w wierszu poleceń dzięki któremu można zwizualizować bieżący stan repozytorium i wszystkich gałęzi. Opcja --graph tworzy mały graf ASCII pokazujący historię gałęzi oraz scaleń. Opcja -all pokazuje wszystkie gałęzie, również te, które nie znajdują się w gałęzi głównej, np. gałęzie testowe.
         </li>
         <li>
@@ -80,7 +79,7 @@
             <code>git branch -v</code> - Komenda pozwala nam pokazać wszystkie gałęzie istniejące w repozytorium, w którym znajdujemy się w daniej chwili. Opcja "-v" pozwala nam zobaczyć ostatni dokonany commit.
         </li>
         <li>
-            <code>git push "remote" "branch"</code> - Komenda git push służy do przekazywania zawartości repozytorium lokalnego do repozytorium zdalnego. Wypycha określoną gałąź ("branch" - nazwa gałęzi, "remote" - adres URL repozytorium zdalnego - z reguły kryje się pod aliasem "origin") wraz ze wszystkimi wymaganymi commitami i obiektami wewnętrznymi. Powoduje to utworzenie gałęzi lokalnej w repozytorium docelowym. Przykładowo, jeśli chcemy wypchnąć gałąź o nazwie "feature" do repozytorium zdalnego o adresie URL: git@github.com:git/git.git, należy użyć komendy: <code> git push git@github.com:git/git.git feature</code> lub, używając aliasu: <code> git push origin feature </code> 
+            <code>git push "remote" "branch"</code> - Komenda git push służy do przekazywania zawartości repozytorium lokalnego do repozytorium zdalnego. Wypycha określoną gałąź ("branch" - nazwa gałęzi, "remote" - adres URL repozytorium zdalnego - z reguły kryje się pod aliasem "origin") wraz ze wszystkimi wymaganymi commitami i obiektami wewnętrznymi. Powoduje to utworzenie gałęzi lokalnej w repozytorium docelowym. Przykładowo, jeśli chcemy wypchnąć gałąź o nazwie "feature" do repozytorium zdalnego o adresie URL: git@github.com:git/git.git, należy użyć komendy: <code> git push git@github.com:git/git.git feature</code> lub, używając aliasu: <code> git push origin feature </code>
         </li>
         <li>
             <code>git log "branch" --not "branch"</code> -
