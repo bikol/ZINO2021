@@ -82,7 +82,7 @@
             <code>git push "remote" "branch"</code> - Komenda git push służy do przekazywania zawartości repozytorium lokalnego do repozytorium zdalnego. Wypycha określoną gałąź ("branch" - nazwa gałęzi, "remote" - adres URL repozytorium zdalnego - z reguły kryje się pod aliasem "origin") wraz ze wszystkimi wymaganymi commitami i obiektami wewnętrznymi. Powoduje to utworzenie gałęzi lokalnej w repozytorium docelowym. Przykładowo, jeśli chcemy wypchnąć gałąź o nazwie "feature" do repozytorium zdalnego o adresie URL: git@github.com:git/git.git, należy użyć komendy: <code> git push git@github.com:git/git.git feature</code> lub, używając aliasu: <code> git push origin feature </code>
         </li>
         <li>
-            <code>git log "branch" --not "branch"</code> -
+            <code>git log "branch" --not "branch"</code> - Komenda ta umożliwia pokazanie historii commitów dotyczącą jednego odgałezienia kodu, jednej gałęzi (ang. branch) bez pokazywania historii innych gałezi.
         </li>
         <li>
             <code>git bisect (start, bad, good, reset)</code> - komenda pozwalająca na przeglądanie zmian commit po commicie celem znalezienia zmiany, która psuje nasz kod. <br><br>
