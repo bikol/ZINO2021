@@ -13,7 +13,7 @@
             <code>git reset HEAD</code> - Komenda reset przenosi aktualną gałąź (branch) do wskazanej pozycji oraz opcjonalnie aktualizuje przechowalnię (stage) oraz katalog roboczy (working directory). Jest również używana do kopiowania plików z katalogu git (history) do przechowalni (stage) bez naruszania katalogu roboczego (working directory). Jeśli commit nie zostanie podany, domyślnie gałąź (branch) wskazuje na HEAD. W takim przypadku nie nastąpi zmiana gałęzi (branch) - przechowalnia (stage) zostanie zresetowana do zawartości ostatniego commita (jeśli zostanie użyty przełącznik --hard resetowi ulegnie również katalog roboczy (working directory)).Oczywiście zamiast używania HEAD można również sprecyzować commit, z którego zostaną skopiowane pliki.
         </li>
         <li>
-            <code>gitk -all</code> - wyświetla GUI dla Git
+            <code>gitk -all</code> - Komenda gitk wywołuje graficzny interfejs służący przeglądaniu repozytoriów. Dodanie opcji -all pozwala na analizę wszystkich składowych repozytorium tj. gałęzie, tagi, referencje.
         </li>
         <li>
            <code>git branch --merged</code> - Filtruje i pokazuje te gałęzie, które są scalone z aktywną gałęzią
@@ -34,10 +34,11 @@
             <code>git config --global user.email ""</code> - Komenda ta służy do ustawienia adresu email użytkownika, jeżeli dodamy opcję --global wtedy Git skorzysta z niej za każdorazowym użyciem.
         </li>
         <li>
-            <code>git diff --staged</code> - sprawdzenie wprowadzonych zmian. (--staged jest synonimem --cached)
+
+            <code>git diff --staged</code> - sprawdzenie wprowadzonych zmian. Domyślnie porównuje z najnowszym commitem(HEAD).
         </li>
         <li>
-            <code>git checkout -b "branch</code> - Aktualizowanie danych w wersji roboczej oraz tworzenie nowej gałęźi
+            <code>git checkout -b "branch"</code> - Aktualizowanie danych w wersji roboczej oraz tworzenie nowej gałęźi
         </li>
         <li>
             <code>git log --graph --all</code> - Tworzy za pomocą tekstu graf pokazujący historie commitów w całym repozytorium
@@ -78,7 +79,7 @@
             <code>git branch -v</code> - Komenda pozwala nam pokazać wszystkie gałęzie istniejące w repozytorium, w którym znajdujemy się w daniej chwili. Opcja "-v" pozwala nam zobaczyć ostatni dokonany commit.
         </li>
         <li>
-            <code>git push "remote" "branch"</code> -
+            <code>git push "remote" "branch"</code> - Komenda git push służy do przekazywania zawartości repozytorium lokalnego do repozytorium zdalnego. Wypycha określoną gałąź ("branch" - nazwa gałęzi, "remote" - adres URL repozytorium zdalnego - z reguły kryje się pod aliasem "origin") wraz ze wszystkimi wymaganymi commitami i obiektami wewnętrznymi. Powoduje to utworzenie gałęzi lokalnej w repozytorium docelowym. Przykładowo, jeśli chcemy wypchnąć gałąź o nazwie "feature" do repozytorium zdalnego o adresie URL: git@github.com:git/git.git, należy użyć komendy: <code> git push git@github.com:git/git.git feature</code> lub, używając aliasu: <code> git push origin feature </code>
         </li>
         <li>
             <code>git log "branch" --not "branch"</code> -
@@ -101,8 +102,7 @@
             <code>git checkout "branch"</code> -
         </li>
         <li>
-            <code>git commit -a -m ""</code> -  rejestruje zmiany w repozytorium, użycie -a automatycznie przygotuje pliki, które zostały zmodyfikowane i usunięte, nie ma wpływu na nowe pliki o których się nie poinformowało Git-a. Dodanie -m, umożliwia stworzenie komunikatu/wiadomości o zatwierdzeniu, jeśli podano wiele opcji, ich wartości są łączone jako oddzielne akapity. 
-Przykład użycia: tworzenie rozbudowanego i intuicyjnego programu z użyciem git'a.
+            <code>git commit -a -m ""</code> - Komenda pozwala na wysłanie commita, gdzie parametr -a uwzględni wszystkie zmiany w plikach, również te nie dodane do poczekalni. Parametr -m odpowiada za dodanie komentarza zawartego w " ".
         </li>
         <li>
             <code>git add .</code> - dodaje zmiany we wszystkich plikach w katalogu roboczym i podkatalogach. Pliki, które nie występowały w bieżącej wersji są dodawane. Jeśli chcemy dodać zmianę tylko w obecnym pliku, to zamiast '.' używamy nazwy pliku, np (git add plik_testowy.txt). Jeżeli wcześniej taki plik nie istniał, to ta komenda powoduje jego stworzenie.
@@ -111,13 +111,7 @@ Przykład użycia: tworzenie rozbudowanego i intuicyjnego programu z użyciem gi
             <code>git checkout "branch"</code> - Komenda służy do utworzenia nowego brancha (o nazwie "branch"), a następnie przepięcia się na niego (checkout) Jest to połączenie komend git branch -f "branch" oraz git checkout "branch".
         </li>
         <li>
-            <code>git remote add "remote_name" "git url"</code> - dodaje zdalne repozytorium ze skrótem, "remote_name" zamiast pełnego "git url"
-        </li>
-        <li>
-            <code>git blame -C "filename"</code> -
-        </li>
-        <li>
-            <code>git branch "name"</code> -
+            <code>git remote add "remote_name" "git url"</code> - Komenda dodaje nowe zdalne repozytorium. Posiada dwa argumenty: "remote_name" i "git url". Pierwszy argument nazywa zdalne repozytorium, drugi argument to link do repozytorium.
         </li>
         <li>
             <code>git blame -C "filename"</code> - Służy do pokazania która wersja i autor ostatnio zmodyfikowali każdą linię pliku o nazwie "filename". Jest to sprawdzenie histroii rozwoju pliku. Parametr -C wykrywa linie przeniesione lub skopiowane z innych plików które był zmodyfikowane w tym samym commicie.
