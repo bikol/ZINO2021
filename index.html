@@ -100,7 +100,7 @@
             <code>git commit -a -m ""</code> - kommitowanie każdego zmienonego plika, dzięki czemu można pominąć git add
         </li>
         <li>
-            <code>git add .</code> -
+            <code>git add .</code> - dodanie wszystkich plików w katalogu i podkatalogach do indeksu gita (staging area). Dodaje do niego aktualną ich postać, nadpisując ich poprzednią postać, jeżeli taka znajdowała się w indeksie. Działa to również dla usuniętych plików. Sama komenda nie zapisuje nic do grafu historii. Zmiany dodane do staging area można później scommitować("zapisać").
         </li>
         <li>
             <code>git checkout "branch"</code> - Komenda tworzy nowego brancha i jednocześnie przepina się na niego. Komenda ta jest połączeniem komend "git branch -f "branch" i git checkout"branch"
