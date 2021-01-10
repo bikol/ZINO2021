@@ -97,7 +97,7 @@
             Gdy znajdziemy wadliwy commit używamy komendy <code>git bisect reset</code> aby zakończyć proces przeglądania commitów.<br><br>
         </li>
         <li>
-            <code>git commit -a -m ""</code> - kommitowanie każdego zmienonego plika, dzięki czemu można pominąć git add
+            <code>git commit -a -m ""</code> - commitowanie każdego zmienonego pliku, dzięki czemu można pominąć git add, - a odpowiada za uzwględnienie każdego edytowanego pliku, -m pozwala na dodanie wiadomosci
         </li>
         <li>
             <code>git add .</code> - dodanie wszystkich plików w katalogu i podkatalogach do indeksu gita (staging area). Dodaje do niego aktualną ich postać, nadpisując ich poprzednią postać, jeżeli taka znajdowała się w indeksie. Działa to również dla usuniętych plików. Sama komenda nie zapisuje nic do grafu historii. Zmiany dodane do staging area można później scommitować("zapisać").
