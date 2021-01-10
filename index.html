@@ -126,3 +126,132 @@
     </ul>
 </body>
 </html>
+
+
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<style>
+    code {
+        background-color: lightgray;
+    }
+</style>
+    <ul>
+        <li>
+            <code>git config --global user.name "username"</code> - ustawienie nazwy użytkownika. Jeśli skorzystasz z opcji --global wystarczy, że taka konfiguracja zostanie dokonana jednorazowo. Git skorzysta z niej podczas każdej operacji wykonywanej przez Ciebie w danym systemie. Jeśli zaistnieje potrzeba zmiany tych informacji dla konkretnego projektu, można skorzystać z git config bez opcji --global.
+        </li>
+        <li>
+            <code>git reset HEAD</code> - Komenda reset przenosi aktualną gałąź (branch) do wskazanej pozycji oraz opcjonalnie aktualizuje przechowalnię (stage) oraz katalog roboczy (working directory). Jest również używana do kopiowania plików z katalogu git (history) do przechowalni (stage) bez naruszania katalogu roboczego (working directory). Jeśli commit nie zostanie podany, domyślnie gałąź (branch) wskazuje na HEAD. W takim przypadku nie nastąpi zmiana gałęzi (branch) - przechowalnia (stage) zostanie zresetowana do zawartości ostatniego commita (jeśli zostanie użyty przełącznik --hard resetowi ulegnie również katalog roboczy (working directory)).Oczywiście zamiast używania HEAD można również sprecyzować commit, z którego zostaną skopiowane pliki.
+        </li>
+        <li>
+            <code>gitk -all</code> - Komenda gitk wywołuje graficzny interfejs służący przeglądaniu repozytoriów. Dodanie opcji -all pozwala na analizę wszystkich składowych repozytorium tj. gałęzie, tagi, referencje.
+        </li>
+        <li>
+           <code>git branch --merged</code> - Filtruje i pokazuje te gałęzie, które są scalone z aktywną gałęzią
+        </li>
+        <li>
+            <code>git branch "branch" "commit hash"</code> - tworzy nową gałąź z istniejącego commita o nazwie "branch" na podstawie podanego hasha
+        </li>
+        <li>
+          <code>git pull "remote" "branch"</code> - Komenda ta pobiera najnowszą wersję kodu ze zdalnego repozytorium oraz scala ją z wybraną gałęzią lokalnego repozytorium. Przykład użycia: <strong>git pull origin master</strong></stronhg>
+        </li>
+        <li>
+            <code>git config --global user.email ""</code> - ustawnienie adresu e-mail użytkownika
+        </li>
+        <li>
+            <code>git diff --staged</code> - Jeśli chcesz zobaczyć zawartość poczekalni, która trafi do repozytorium z najbliższym zatwierdzeniem, możesz użyć polecenia git diff --staged. To polecenie porówna zmiany z poczekalni z ostatnią zmianą.
+        </li>
+        <li>
+            <code>git config --global user.email ""</code> - Komenda ta służy do ustawienia adresu email użytkownika, jeżeli dodamy opcję --global wtedy Git skorzysta z niej za każdorazowym użyciem.
+        </li>
+        <li>
+
+            <code>git diff --staged</code> - sprawdzenie wprowadzonych zmian. Domyślnie porównuje z najnowszym commitem(HEAD).
+        </li>
+        <li>
+            <code>git checkout -b "branch"</code> - Aktualizowanie danych w wersji roboczej oraz tworzenie nowej gałęźi
+        </li>
+        <li>
+            <code>git log --graph --all</code> - Tworzy za pomocą tekstu graf pokazujący historie commitów w całym repozytorium
+        </li>
+        <li>
+            <code>git branch -d "branch"</code> - Usuwa wskazany branch. Mozliwe jest usunięcie kilku branchy na raz.
+        </li>
+        <li>
+            <code>git log --graph --all</code> - Tworzy bardzo przydatny wykres w wierszu poleceń dzięki któremu można zwizualizować bieżący stan repozytorium i wszystkich gałęzi. Opcja --graph tworzy mały graf ASCII pokazujący historię gałęzi oraz scaleń. Opcja -all pokazuje wszystkie gałęzie, również te, które nie znajdują się w gałęzi głównej, np. gałęzie testowe.
+        </li>
+        <li>
+            <code>git branch -d "branch"</code> - Komenda pozwalająca na lokalne usunięcie branch. Opcja -d usunie branch tylko wtedy gdy jeśli ona została wysłana i zmergowana z zewnętrznym branch. Jeśli zachodzi potrzeba użycia silnego usunięcia branch, trzeba użyć opcji -D, pozwoli na usuniecie branch nawet jesli nie zostalo ono wyslane ani zmergowane. Po użyciu tej komendy branch zostanie usunięty z lokalnego repozytorium.
+        </li>
+        <li>
+            <code>git fetch "remote" "branch"</code> - git fetch to polecenie, które umożliwia pobieranie najnowszej wersji zdalnego repozytorium z określonej gałęzi bez scalania. Przykład użycia: <strong>git fetch origin master</strong>
+        </li>
+        <li>
+            <code>git config --global color.ui true</code> -
+        </li>
+        <li>
+            <code>git commit "filename"</code> -
+        </li>
+        <li>
+            <code>git branch -v</code> -
+        </li>
+        <li>
+            <code>git config --global color.ui true</code> - Komenda jest przełącznikiem pozwalającym konfigurować koloryzowanie danych wyjścia. Dostępne są trzy opcje: 
+                <ul>
+                    <li><code>true</code> - włącza koloryzowanie danych wyjściowych</li>
+                    <li><code>auto</code> - włącza koloryzowanie danych wyjściowych ale tylko te trafiające do terminalu</li>
+                    <li><code>false</code> - wyłącza koloryzowanie danych wyjściowych</li>
+                </ul>
+        </li>
+        <li>
+            <code>git commit "filename"</code> - Komenda zatwierdza zmiany na jednym określonym w argumencie <code>filename</code></code> pliku.
+        </li>
+        <li>
+            <code>git branch -v</code> - Komenda pozwala nam pokazać wszystkie gałęzie istniejące w repozytorium, w którym znajdujemy się w daniej chwili. Opcja "-v" pozwala nam zobaczyć ostatni dokonany commit.
+        </li>
+        <li>
+            <code>git push "remote" "branch"</code> - Komenda git push służy do przekazywania zawartości repozytorium lokalnego do repozytorium zdalnego. Wypycha określoną gałąź ("branch" - nazwa gałęzi, "remote" - adres URL repozytorium zdalnego - z reguły kryje się pod aliasem "origin") wraz ze wszystkimi wymaganymi commitami i obiektami wewnętrznymi. Powoduje to utworzenie gałęzi lokalnej w repozytorium docelowym. Przykładowo, jeśli chcemy wypchnąć gałąź o nazwie "feature" do repozytorium zdalnego o adresie URL: git@github.com:git/git.git, należy użyć komendy: <code> git push git@github.com:git/git.git feature</code> lub, używając aliasu: <code> git push origin feature </code>
+        </li>
+        <li>
+            <code>git log "branch" --not "branch"</code> -
+        </li>
+        <li>
+            <code>git bisect (start, bad, good, reset)</code> - komenda pozwalająca na przeglądanie zmian commit po commicie celem znalezienia zmiany, która psuje nasz kod. <br><br>
+            <b>Przykład użycia:</b><br>
+            Przechodzimy do dowolnego commita, gdzie błąd nie występuje i wykonujemy na nim komendy <code>git bisect start</code> oraz <code>git bisect good</code> - w ten sposób wybieramy punkt od którego rozpoczyna się przeglądanie commitów, a commit na którym jesteśmy oznaczamy jako działający.<br>
+            Git w tym momencie dzieli ilość commitów na pół i przechodzi do "środkowego". Sprawdzamy czy błąd występuje, jeśli nie ponownie używamy komendy <code>git bisect good</code>, a git sprawdza drugą połowę commitów, w przeciwnym wypadku używamy komendy <code>git bisect bad</code>, wtedy Git będzie sprawdzał pierwszą połowę commitów.<br>
+            Proces ten powtarza się aż do momentu, w którym znajdziemy commit psujący nasz kod.
+            Gdy znajdziemy wadliwy commit używamy komendy <code>git bisect reset</code> aby zakończyć proces przeglądania commitów.<br><br>
+        </li>
+        <li>
+            <code>git commit -a -m ""</code> - kommitowanie każdego zmienonego plika, dzięki czemu można pominąć git add
+        </li>
+        <li>
+            <code>git add .</code> - dodanie wszystkich plików w katalogu i podkatalogach do indeksu gita (staging area). Dodaje do niego aktualną ich postać, nadpisując ich poprzednią postać, jeżeli taka znajdowała się w indeksie. Działa to również dla usuniętych plików. Sama komenda nie zapisuje nic do grafu historii. Zmiany dodane do staging area można później scommitować("zapisać").
+        </li>
+        <li>
+            <code>git checkout "branch"</code> - Komenda tworzy nowego brancha i jednocześnie przepina się na niego. Komenda ta jest połączeniem komend "git branch -f "branch" i git checkout"branch"
+        </li>
+        <li>
+            <code>git commit -a -m ""</code> - Komenda pozwala na wysłanie commita, gdzie parametr -a uwzględni wszystkie zmiany w plikach, również te nie dodane do poczekalni. Parametr -m odpowiada za dodanie komentarza zawartego w " ".
+        </li>
+        <li>
+            <code>git add .</code> - dodaje zmiany we wszystkich plikach w katalogu roboczym i podkatalogach. Pliki, które nie występowały w bieżącej wersji są dodawane. Jeśli chcemy dodać zmianę tylko w obecnym pliku, to zamiast '.' używamy nazwy pliku, np (git add plik_testowy.txt). Jeżeli wcześniej taki plik nie istniał, to ta komenda powoduje jego stworzenie.
+        </li>
+        <li>
+            <code>git checkout "branch"</code> - Komenda służy do utworzenia nowego brancha (o nazwie "branch"), a następnie przepięcia się na niego (checkout). Jest to połączenie komend git branch -f "branch" oraz git checkout "branch".
+        </li>
+        <li>
+            <code>git remote add "remote_name" "git url"</code> - Komenda dodaje nowe zdalne repozytorium. Posiada dwa argumenty: "remote_name" i "git url". Pierwszy argument nazywa zdalne repozytorium, drugi argument to link do repozytorium.
+        </li>
+        <li>
+            <code>git blame -C "filename"</code> - Służy do pokazania która wersja i autor ostatnio zmodyfikowali każdą linię pliku o nazwie "filename". Jest to sprawdzenie histroii rozwoju pliku. Parametr -C wykrywa linie przeniesione lub skopiowane z innych plików które był zmodyfikowane w tym samym commicie.
+        </li>
+        <li>
+            <code>git branch "name"</code> - Polecenie tworzy nową gałąź. Niebędne polecenie do pracy w modelu Branch per feature.
+        </li>
+    </ul>
+</body>
+</html>
