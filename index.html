@@ -10,7 +10,7 @@
             <code>git config --global user.name "username"</code> - ustawienie nazwy użytkownika. Jeśli skorzystasz z opcji --global wystarczy, że taka konfiguracja zostanie dokonana jednorazowo. Git skorzysta z niej podczas każdej operacji wykonywanej przez Ciebie w danym systemie. Jeśli zaistnieje potrzeba zmiany tych informacji dla konkretnego projektu, można skorzystać z git config bez opcji --global.
         </li>
         <li>
-            <code>git reset HEAD</code> - Komenda reset przenosi aktualną gałąź (branch) do wskazanej pozycji oraz opcjonalnie aktualizuje przechowalnię (stage) oraz katalog roboczy (working directory). Jest również używana do kopiowania plików z katalogu git (history) do przechowalni (stage) bez naruszania katalogu roboczego (working directory). Jeśli commit nie zostanie podany, domyślnie gałąź (branch) wskazuje na HEAD. W takim przypadku nie nastąpi zmiana gałęzi (branch) - przechowalnia (stage) zostanie zresetowana do zawartości ostatniego commita (jeśli zostanie użyty przełącznik --hard resetowi ulegnie również katalog roboczy (working directory)).Oczywiście zamiast używania HEAD można również sprecyzować commit, z którego zostaną skopiowane pliki.
+            <code>git reset HEAD</code> - Resetowanie ostatniego lokalnego commitu, który nie został jeszcze wysłany(unstage). Na przykład jeżeli chcemy zmienić zawartość tekstu w commicie, albo dodać inne pliki.
         </li>
         <li>
             <code>gitk -all</code> - wyświetla GUI dla Git
