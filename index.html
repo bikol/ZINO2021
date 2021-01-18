@@ -1,8 +1,4 @@
-
 <html>
-<head>
-<meta charset="utf-8">
-</head>
 <body>
 <style>
     code {
@@ -17,7 +13,7 @@
             <code>git reset HEAD</code> - Komenda reset przenosi aktualną gałąź (branch) do wskazanej pozycji oraz opcjonalnie aktualizuje przechowalnię (stage) oraz katalog roboczy (working directory). Jest również używana do kopiowania plików z katalogu git (history) do przechowalni (stage) bez naruszania katalogu roboczego (working directory). Jeśli commit nie zostanie podany, domyślnie gałąź (branch) wskazuje na HEAD. W takim przypadku nie nastąpi zmiana gałęzi (branch) - przechowalnia (stage) zostanie zresetowana do zawartości ostatniego commita (jeśli zostanie użyty przełącznik --hard resetowi ulegnie również katalog roboczy (working directory)).Oczywiście zamiast używania HEAD można również sprecyzować commit, z którego zostaną skopiowane pliki.
         </li>
         <li>
-            <code>gitk -all</code> - Komenda gitk wywołuje graficzny interfejs służący przeglądaniu repozytoriów. Dodanie opcji -all pozwala na analizę wszystkich składowych repozytorium tj. gałęzie, tagi, referencje.
+            <code>gitk -all</code> - wyświetla GUI dla Git
         </li>
         <li>
            <code>git branch --merged</code> - Filtruje i pokazuje te gałęzie, które są scalone z aktywną gałęzią
@@ -38,17 +34,16 @@
             <code>git config --global user.email ""</code> - Komenda ta służy do ustawienia adresu email użytkownika, jeżeli dodamy opcję --global wtedy Git skorzysta z niej za każdorazowym użyciem.
         </li>
         <li>
-
-            <code>git diff --staged</code> - sprawdzenie wprowadzonych zmian. Domyślnie porównuje z najnowszym commitem(HEAD).
+            <code>git diff --staged</code> - sprawdzenie wprowadzonych zmian. (--staged jest synonimem --cached)
         </li>
         <li>
-            <code>git checkout -b "branch"</code> - Aktualizowanie danych w wersji roboczej oraz tworzenie nowej gałęźi
+            <code>git checkout -b "branch"</code> -
         </li>
         <li>
-            <code>git log --graph --all</code> - Tworzy za pomocą tekstu graf pokazujący historie commitów w całym repozytorium
+            <code>git log --graph --all</code> -
         </li>
         <li>
-            <code>git branch -d "branch"</code> - Usuwa wskazany branch. Mozliwe jest usunięcie kilku branchy na raz.
+            <code>git branch -d "branch"</code> -
         </li>
         <li>
             <code>git log --graph --all</code> - Tworzy bardzo przydatny wykres w wierszu poleceń dzięki któremu można zwizualizować bieżący stan repozytorium i wszystkich gałęzi. Opcja --graph tworzy mały graf ASCII pokazujący historię gałęzi oraz scaleń. Opcja -all pokazuje wszystkie gałęzie, również te, które nie znajdują się w gałęzi głównej, np. gałęzie testowe.
@@ -83,8 +78,16 @@
             <code>git branch -v</code> - Komenda pozwala nam pokazać wszystkie gałęzie istniejące w repozytorium, w którym znajdujemy się w daniej chwili. Opcja "-v" pozwala nam zobaczyć ostatni dokonany commit.
         </li>
         <li>
-            <code>git push "remote" "branch"</code> - Komenda git push służy do przekazywania zawartości repozytorium lokalnego do repozytorium zdalnego. Wypycha określoną gałąź ("branch" - nazwa gałęzi, "remote" - adres URL repozytorium zdalnego - z reguły kryje się pod aliasem "origin") wraz ze wszystkimi wymaganymi commitami i obiektami wewnętrznymi. Powoduje to utworzenie gałęzi lokalnej w repozytorium docelowym. Przykładowo, jeśli chcemy wypchnąć gałąź o nazwie "feature" do repozytorium zdalnego o adresie URL: git@github.com:git/git.git, należy użyć komendy: <code> git push git@github.com:git/git.git feature</code> lub, używając aliasu: <code> git push origin feature </code>
+            <code>git push "remote" "branch"</code> - Wypycha określoną gałąź do elementu wraz ze wszystkimi wymaganymi zatwierdzeniami i obiektami wewnętrznymi. Powoduje to utworzenie gałęzi lokalnej w repozytorium docelowym. Aby zapobiec nadpisaniu zatwierdzeń, Środowisko Git nie pozwoli na wypychanie, jeżeli przyczyni się do scalenia w repozytorium docelowym bez przyspieszenia.
+
+
         </li>
+         <li>
+            <code>git push "remote" "branch"</code> - Wypycha określoną gałąź do elementu wraz ze wszystkimi wymaganymi zatwierdzeniami i obiektami wewnętrznymi. Powoduje to utworzenie gałęzi lokalnej w repozytorium docelowym. Aby zapobiec nadpisaniu zatwierdzeń, Środowisko Git nie pozwoli na wypychanie, jeżeli przyczyni się do scalenia w repozytorium docelowym bez przyspieszenia.
+
+
+        </li>
+
         <li>
             <code>git log "branch" --not "branch"</code> -
         </li>
@@ -97,25 +100,32 @@
             Gdy znajdziemy wadliwy commit używamy komendy <code>git bisect reset</code> aby zakończyć proces przeglądania commitów.<br><br>
         </li>
         <li>
-            <code>git commit -a -m ""</code> - kommitowanie każdego zmienonego plika, dzięki czemu można pominąć git add
+            <code>git commit -a -m ""</code> -
         </li>
         <li>
-            <code>git add .</code> - dodanie wszystkich plików w katalogu i podkatalogach do indeksu gita (staging area). Dodaje do niego aktualną ich postać, nadpisując ich poprzednią postać, jeżeli taka znajdowała się w indeksie. Działa to również dla usuniętych plików. Sama komenda nie zapisuje nic do grafu historii. Zmiany dodane do staging area można później scommitować("zapisać").
+            <code>git add .</code> - 
         </li>
         <li>
-            <code>git checkout "branch"</code> - Komenda tworzy nowego brancha i jednocześnie przepina się na niego. Komenda ta jest połączeniem komend "git branch -f "branch" i git checkout"branch"
+            <code>git checkout "branch"</code> -
         </li>
         <li>
-            <code>git commit -a -m ""</code> - Komenda pozwala na wysłanie commita, gdzie parametr -a uwzględni wszystkie zmiany w plikach, również te nie dodane do poczekalni. Parametr -m odpowiada za dodanie komentarza zawartego w " ".
+            <code>git commit -a -m ""</code> -  rejestruje zmiany w repozytorium, użycie -a automatycznie przygotuje pliki, które zostały zmodyfikowane i usunięte, nie ma wpływu na nowe pliki o których się nie poinformowało Git-a. Dodanie -m, umożliwia stworzenie komunikatu/wiadomości o zatwierdzeniu, jeśli podano wiele opcji, ich wartości są łączone jako oddzielne akapity. 
+Przykład użycia: tworzenie rozbudowanego i intuicyjnego programu z użyciem git'a.
         </li>
         <li>
             <code>git add .</code> - dodaje zmiany we wszystkich plikach w katalogu roboczym i podkatalogach. Pliki, które nie występowały w bieżącej wersji są dodawane. Jeśli chcemy dodać zmianę tylko w obecnym pliku, to zamiast '.' używamy nazwy pliku, np (git add plik_testowy.txt). Jeżeli wcześniej taki plik nie istniał, to ta komenda powoduje jego stworzenie.
         </li>
         <li>
-            <code>git checkout "branch"</code> - Komenda służy do utworzenia nowego brancha (o nazwie "branch"), a następnie przepięcia się na niego (checkout). Jest to połączenie komend git branch -f "branch" oraz git checkout "branch".
+            <code>git checkout "branch"</code> - Komenda służy do utworzenia nowego brancha (o nazwie "branch"), a następnie przepięcia się na niego (checkout) Jest to połączenie komend git branch -f "branch" oraz git checkout "branch".
         </li>
         <li>
-            <code>git remote add "remote_name" "git url"</code> - Komenda dodaje nowe zdalne repozytorium. Posiada dwa argumenty: "remote_name" i "git url". Pierwszy argument nazywa zdalne repozytorium, drugi argument to link do repozytorium.
+            <code>git remote add "remote_name" "git url"</code> - dodaje zdalne repozytorium ze skrótem, "remote_name" zamiast pełnego "git url"
+        </li>
+        <li>
+            <code>git blame -C "filename"</code> -
+        </li>
+        <li>
+            <code>git branch "name"</code> -
         </li>
         <li>
             <code>git blame -C "filename"</code> - Służy do pokazania która wersja i autor ostatnio zmodyfikowali każdą linię pliku o nazwie "filename". Jest to sprawdzenie histroii rozwoju pliku. Parametr -C wykrywa linie przeniesione lub skopiowane z innych plików które był zmodyfikowane w tym samym commicie.
